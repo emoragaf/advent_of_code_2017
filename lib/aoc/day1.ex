@@ -1,21 +1,4 @@
-defmodule AdventOfCode2017 do
-  @moduledoc """
-  Documentation for AdventOfCode2017.
-  """
-
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> AdventOfCode2017.hello
-      :world
-
-  """
-  def hello do
-    :world
-  end
-
+defmodule AoC.Day1 do
   def reverse_captcha(input) when is_bitstring(input) do
     chars = [h|_t] = input
     |> String.graphemes
