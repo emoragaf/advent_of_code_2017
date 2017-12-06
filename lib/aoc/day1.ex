@@ -1,6 +1,7 @@
 defmodule AoC.Day1 do
   alias AoC.Day1.HalfwayAround, as: HA
   alias AoC.Day1.Consecutive, as: C
+
   def reverse_captcha(input, method \\ :consecutive)
   def reverse_captcha(input, :consecutive) when is_bitstring(input) do
     do_reverse_captcha(input, &C.pair/1)
@@ -40,7 +41,7 @@ defmodule AoC.Day1.HalfwayAround do
     |> Enum.split(count)
   end
 
-  defp make_pairs({l1, l2} = lists) do
+  defp make_pairs({l1, l2} = _lists) do
     pairs1 = Enum.zip(l1, l2)
     pairs2 = Enum.zip(l2, l1)
     List.flatten(pairs1, pairs2)
